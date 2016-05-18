@@ -1,0 +1,59 @@
+header{
+	background: #2c3e50;
+	color: #fff;
+}
+
+body{
+	padding-top: 80px;
+	position: relative;
+}
+.seccion{
+	padding-top: 70px;
+}
+
+.main{
+	background: #f2f2f2;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.color1{
+	
+	color: #34495e;
+}
+
+aside{
+	background: #c0392b;
+	color: #fff;
+}
+
+footer{
+	background: #2c3e50;
+	height: :auto;
+	color: #fff;
+}
+
+div .row footer{
+	background: #f2f2f2;	
+	 
+}
+
+.tamanoTumnail{
+	background-size: 100%;
+	background-size: 100%;
+}
+
+tamanoTable{
+	width: 10px;
+}
+
+.formMargin{
+	margin-left: 20
+}
+
+form{
+	margin-top: 20px;
+}
+/*h1{
+	color: #786C78;
+}*/

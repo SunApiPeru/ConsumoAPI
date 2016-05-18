@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsRest-WebClient", "ConsRest-WebClient\ConsRest-WebClient.csproj", "{5CF6FB8D-7850-4142-A7B5-1965D872752E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF6FB8D-7850-4142-A7B5-1965D872752E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF6FB8D-7850-4142-A7B5-1965D872752E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF6FB8D-7850-4142-A7B5-1965D872752E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF6FB8D-7850-4142-A7B5-1965D872752E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
