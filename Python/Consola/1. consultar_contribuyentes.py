@@ -17,7 +17,10 @@ un InsecurePlatformWarning. Mas información en: http://urllib3.readthedocs.org/
 import requests
 
 # URL donde se realiza la petición https. Ver: https://sunapiperu.com/pruebas#consultaContribuyentes
-API_URL = "https://sunapiperu.com/api_qa/contribuyente" 
+API_URL = "https://sunapiperu.com/api_qa/contribuyente"
+
+# Api key para poder consultar la API de pruebas
+API_KEY = 'sunapi'
 
 mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como realizar la búsqueda de uno o más contribuyentes por"+\
 					 "su nombre o razón social. Esperamos que te sea de utilidad en tus futuras implementaciones."+\
@@ -27,34 +30,36 @@ mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como realiza
 
 # Imprime los campos del json de respuesta del servidor en el ordén deseado
 def imprime_json_en_orden(objeto_json):
-	print ('RUC: ' + objeto_json['ruc'])
-	print ('Estado: ' + objeto_json['estado'])
-	print ('Nombre: ' + objeto_json['nombre'])
-	print ('Departamento: ' + objeto_json['departamento'])
-	print ('Provincia: ' + objeto_json['provincia'])
-	print ('Distrito: ' + objeto_json['distrito'])	
-	print ('Calle: ' + objeto_json['calle'])
-	print ('Número: ' + objeto_json['numero'])
-	print ('Ubigeo: ' + objeto_json['ubigeo'])
-	print ('URL_Mapa: ' + objeto_json['mapa'])
+	print ('- RUC: ' + objeto_json['ruc'])
+	print ('- Estado: ' + objeto_json['estado'])
+	print ('- Nombre: ' + objeto_json['nombre'])
+	print ('- Departamento: ' + objeto_json['departamento'])
+	print ('- Provincia: ' + objeto_json['provincia'])
+	print ('- Distrito: ' + objeto_json['distrito'])	
+	print ('- Calle: ' + objeto_json['calle'])
+	print ('- Número: ' + objeto_json['numero'])
+	print ('- Ubigeo: ' + objeto_json['ubigeo'])
+	print ('- URL_Mapa: ' + objeto_json['mapa'])
 
 # Captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
 	try:
 		# Captura la entrada del usuario
-		ruc = input('A continuación escriba el RUC del contribuyente que desea consultar y presione la tecla Enter:\n')
+		razon_social = input('A continuación escriba la razón social que desea consultar y presione la tecla Enter:\n')
 		# Prepara los parametros para realiza la solicitud
-		parametros = {'apikey':API_KEY, 'ruc':ruc}
+		parametros = {'apikey':API_KEY, 'nombre':razon_social}
 		# Realiza la solicitud teniendo en cuenta un timeout de 5 segundos
 		respuesta = requests.get(API_URL, params = parametros, timeout=5.0)
 		# Parsea la respuesta del servidor a un json utilizando el json decoder provisto por requests
 		respuesta_json = respuesta.json()
 		# Verifica la respuesta del servidor e imprime en consola de acorde a los resultados
-		if "mensaje" in respuesta_json:
-			print("Lo sentimos. " + respuesta_json['mensaje'] + ".")
-		else: 
-			print("Los datos del contribuyente son:\n")
-			imprime_json_en_orden(respuesta_json)			
+		if 'mensaje' in respuesta_json:
+			print(respuesta_json['mensaje'])
+		else:
+			print ('- Los contribuyentes encontrados son: ')
+			for contribuyente in respuesta_json:
+				print('Contribuyente: ')
+				imprime_json_en_orden(contribuyente)			
 	except Exception as e:
 		# Ante cualquier excepción imprime la excepción
 		print (e)	
