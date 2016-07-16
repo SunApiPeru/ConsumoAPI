@@ -1,7 +1,7 @@
 # coding=utf-8
-# Ejemplo de consumo de API, SunApiPerú.
+# Ejemplo de consumo de API, versión de pruebas.
 # Elaborado por: Marlon Jodar, miembro del equipo de desarrollo SunApiPerú.
-# Mas información en: https://www.sunapiperu.com
+# Mas información en: https://www.sunapiperu.com/pruebas
 
 '''
 IMPORTANTE:
@@ -12,33 +12,44 @@ restricciones en su módulo ssl lo cuál limita la configuración que urllib3 pu
 que peticiones Https fallen y ciertas caracteristicas de seguridad no esten disponibles emitiendo como resultado
 un InsecurePlatformWarning. Mas información en: http://urllib3.readthedocs.org/en/latest/security.html#certifi-with-urllib3.
 '''
-# Importa la librería requests para realizar las peticiones https. (Mas información: http://docs.python-requests.org/)
+# Módulo para realizar las peticiones https. (Mas información: http://docs.python-requests.org/)
 import requests
 
-# Variable global
-API_URL = "https://sunapiperu.com/api/validar_ruc" # URL donde se realiza la petición https. (Ver https://www.sunapiperu.com/features)
+# URL donde se realiza la petición https. Ver: https://sunapiperu.com/pruebas#consultaEstadoPlan
+API_URL = "https://sunapiperu.com/api_qa/plan" 
 
-mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como validar la estructura de un RUC. Esperamos que te sea "+\
+mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como consultar el estado de tu plan. Esperamos que te sea "+\
 			  		 "de utilidad en tus futuras implementaciones. Cualquier duda o inquietud no dudes en comunicarte con nuestro "+\
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
 
-# Función que captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
+# Imprime los campos del json de respuesta del servidor en el ordén deseado
+def imprime_json_en_orden(objeto_json):
+	print ("El estado de su plan es:")
+	print ('- Tipo de plan: ' + objeto_json['plan'])
+	print ('- Peticiones disponibles: ' + str(objeto_json['disponibles']))
+	print ('- Peticiones realizadas: ' + str(objeto_json['peticiones']))
+	print ('- Fecha de renovación: ' + objeto_json['renueva'])
+
+# Captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
 	try:
 		# Captura la entrada del usuario
-		ruc = input('A continuación escriba el RUC del contribuyente que desea consultar y presione la tecla Enter:\n')
-		# Prepara los parametros para realiza la solicitud
-		parametros = {'ruc':ruc}
+		api_key = input('A continuación escriba su apikey y presione la tecla Enter:\n')
+		# Prepara los parametros para realizar la solicitud
+		parametros = {'apikey': api_key}
 		# Realiza la solicitud teniendo en cuenta un timeout de 5 segundos
-		respuesta = requests.get(API_URL, params = parametros, timeout=5.0)
+		respuesta = requests.get(API_URL, params = parametros, timeout = 5.0)
 		# Parsea la respuesta del servidor a un json utilizando el json decoder provisto por requests
-		respuesta_json = respuesta.json()	
-		# Imprime en pantalla la respuesta del servidor
-		print(respuesta_json['message'] + ".")						
-	except:
-		# Ante cualquier excepción imprime un mensaje genérico.
-		print ("Lo sentimos ha ocurrido un error, intente nuevamente.")	
+		respuesta_json = respuesta.json()
+		# Imprime la respuesta	
+		if "mensaje" in respuesta_json:
+			print (respuesta_json['mensaje'])
+		else: 
+			imprime_json_en_orden(respuesta_json)							
+	except Exception as e:
+		# De haber una excepción la imprime		
+		print (e)
 
 # Asegura la ejecución procedural del script como módulo primario de ejecución
 if __name__ == '__main__':

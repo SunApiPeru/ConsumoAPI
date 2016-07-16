@@ -1,5 +1,5 @@
 # coding=utf-8
-# Ejemplo de consumo de API, SunApiPerú.
+# Ejemplo de consumo de API de prueba, SunApiPerú.
 # Elaborado por: Marlon Jodar, miembro del equipo de desarrollo SunApiPerú.
 # Mas información en: https://www.sunapiperu.com
 
@@ -16,20 +16,12 @@ un InsecurePlatformWarning. Mas información en: http://urllib3.readthedocs.org/
 import requests
 
 # Variable global
-API_URL = "https://sunapiperu.com/api/contribuyente" # URL donde se realiza la petición https. (Ver https://www.sunapiperu.com/features)
+API_URL = "https://sunapiperu.com/api/validar_ruc" # URL donde se realiza la petición https. (Ver https://www.sunapiperu.com/features)
 
-mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como obtener información de un contribuyente usando su RUC. Esperamos que te sea "+\
+mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como validar la estructura de un RUC. Esperamos que te sea "+\
 			  		 "de utilidad en tus futuras implementaciones. Cualquier duda o inquietud no dudes en comunicarte con nuestro "+\
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
-
-# Función que imprime los campos del json de respuesta del servidor en el ordén deseado
-def imprime_json_en_orden(objeto_json):
-	print ('RUC: ' + objeto_json['ruc'])
-	print ('Estado: ' + objeto_json['estado'])
-	print ('Nombre: ' + objeto_json['nombre'])
-	print ('Calle: ' + objeto_json['calle'])
-	print ('Número: ' + objeto_json['numero'])
 
 # Función que captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
@@ -41,13 +33,9 @@ def realiza_solicitud():
 		# Realiza la solicitud teniendo en cuenta un timeout de 5 segundos
 		respuesta = requests.get(API_URL, params = parametros, timeout=5.0)
 		# Parsea la respuesta del servidor a un json utilizando el json decoder provisto por requests
-		respuesta_json = respuesta.json()
-		# Verifica la respuesta del servidor e imprime en consola de acorde a los resultados
-		if "message" in respuesta_json:
-			print("Lo sentimos. " + respuesta_json['message'] + ".")
-		else: 
-			print("Los datos del contribuyente son:\n")
-			imprime_json_en_orden(respuesta_json)			
+		respuesta_json = respuesta.json()	
+		# Imprime en pantalla la respuesta del servidor
+		print(respuesta_json['message'] + ".")						
 	except:
 		# Ante cualquier excepción imprime un mensaje genérico.
 		print ("Lo sentimos ha ocurrido un error, intente nuevamente.")	
