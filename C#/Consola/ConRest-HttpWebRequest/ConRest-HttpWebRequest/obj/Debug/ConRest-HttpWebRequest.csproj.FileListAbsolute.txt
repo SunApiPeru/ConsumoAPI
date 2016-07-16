@@ -1,0 +1,8 @@
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\bin\Debug\ConRest-HttpWebRequest.exe
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\bin\Debug\ConRest-HttpWebRequest.pdb
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\bin\Debug\Newtonsoft.Json.dll
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\obj\Debug\ConRest-HttpWebRequest.csprojResolveAssemblyReference.cache
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\obj\Debug\ConRest-HttpWebRequest.exe
+c:\users\vasco\documents\visual studio 2012\Projects\ConRest-HttpWebRequest\ConRest-HttpWebRequest\obj\Debug\ConRest-HttpWebRequest.pdb
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConRest-HttpWebRequest\ConRest-HttpWebRequest\obj\Debug\ConRest-HttpWebRequest.exe
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConRest-HttpWebRequest\ConRest-HttpWebRequest\obj\Debug\ConRest-HttpWebRequest.pdb
