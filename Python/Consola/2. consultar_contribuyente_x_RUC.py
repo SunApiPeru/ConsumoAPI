@@ -57,9 +57,9 @@ def realiza_solicitud():
 		else: 
 			print("Los datos del contribuyente son:\n")
 			imprime_json_en_orden(respuesta_json)			
-	except:
-		# Ante cualquier excepción imprime un mensaje genérico.
-		print ("Lo sentimos ha ocurrido un error, intente nuevamente.")	
+	except Exception as e:
+		# Ante cualquier excepción imprime la excepción
+		print (e)	
 
 # Asegura la ejecución procedural del script como módulo primario de ejecución
 if __name__ == '__main__':

@@ -12,6 +12,7 @@ restricciones en su módulo ssl lo cuál limita la configuración que urllib3 pu
 que peticiones Https fallen y ciertas caracteristicas de seguridad no esten disponibles emitiendo como resultado
 un InsecurePlatformWarning. Mas información en: http://urllib3.readthedocs.org/en/latest/security.html#certifi-with-urllib3.
 '''
+
 # Módulo para realizar las peticiones https. (Mas información: http://docs.python-requests.org/)
 import requests
 
