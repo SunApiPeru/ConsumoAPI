@@ -21,6 +21,7 @@ parameters: son los parámetros que espera el servicio. Algunos parámetros son 
 CONSULTAS DE CONTRIBUYENTE
 
 1.Obtener lista de contribuyente por nombre
+
 	- Descripción:
 	El servicio realiza una búsqueda de contribuyentes por nombre y devuelve una lista,si no existen coincidencias devuelve un mensaje.Permite filtrar la búsqueda por el estado del contribuyente, activos o inactivos.
 	
@@ -35,6 +36,7 @@ CONSULTAS DE CONTRIBUYENTE
 	.todos: Parámetro opcional que permite filtrar los contribuyentes por su estado, acepta valores "True" o "False". El primer valor filtra todos los contribuyentes, mientras que el segundo solo los activos. Si se ignora este parámetro, se filtran solo los contribuyentes activos por defecto.
 
 2.Obtener contribuyente por RUC
+
 	- Descripción:
 	El servicio realiza una busqueda de contribuyente por ruc,devuelve un único contribuyente si existe.Si el ruc ingresado es incorrecto devuelve un mensaje de error, de la misma manera si no existe,devuelve el mensaje correspondiente.
 
@@ -46,6 +48,7 @@ CONSULTAS DE CONTRIBUYENTE
 	.apikey: Es la clave que se le asigna al usuario del cliente, una vez tenga un plan, para poder tener acceso al servicio.
 
 3.Validar RUC
+
 	- Descripción:
 	El servicio valida que un RUC sea correcto o no.
 
@@ -59,6 +62,7 @@ CONSULTAS DE CONTRIBUYENTE
 CONSULTAS DE TASA DE CAMBIO Y CÁLCULO
 
 1.Obtener tasa de cambio actual del sol peruano
+
 	- Descripción:
 	Obtiene la tasa de cambio actual del sol con respecto a la moneda que se pase como parámetro y a la fecha . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se le pasa moneda, devuelve la tasa del USD por defecto. Si no se le pasa fecha toma la actual.
 
@@ -73,6 +77,7 @@ CONSULTAS DE TASA DE CAMBIO Y CÁLCULO
 	.fecha: Es la fecha en la que se desea ver la tasa de cambio. Si no existe esa fecha en la base de datos, se retorna para la inmediata inferior.
 
 2.Calcula monto segun tasa actual del sol
+
 	- Descripción:
 	Calcula el monto de acuerdo a la tasa de cambio actual del sol con respecto a las monedas que se pase como parámetro, la fecha y el valor inicial . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se pasa fecha toma la actual.
 
