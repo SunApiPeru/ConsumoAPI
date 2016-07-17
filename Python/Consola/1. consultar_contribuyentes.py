@@ -39,7 +39,7 @@ def imprime_json_en_orden(objeto_json):
 	print ('- Calle: ' + objeto_json['calle'])
 	print ('- Número: ' + objeto_json['numero'])
 	print ('- Ubigeo: ' + objeto_json['ubigeo'])
-	print ('- URL_Mapa: ' + objeto_json['mapa'])
+	print ('- URL_Mapa: ' + objeto_json['mapa'] + '\n')
 
 # Captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
@@ -56,7 +56,7 @@ def realiza_solicitud():
 		if 'mensaje' in respuesta_json:
 			print(respuesta_json['mensaje'])
 		else:
-			print ('- Los contribuyentes encontrados son: ')
+			print ('- Los contribuyentes encontrados son:\n ')
 			for contribuyente in respuesta_json:
 				print('Contribuyente: ')
 				imprime_json_en_orden(contribuyente)			
