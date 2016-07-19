@@ -28,3 +28,32 @@ c:\users\vasco\documents\visual studio 2012\Projects\WebForms\WebForms\obj\Debug
 c:\users\vasco\documents\visual studio 2012\Projects\WebForms\WebForms\obj\Debug\Interop.NETCONLib.dll
 c:\users\vasco\documents\visual studio 2012\Projects\WebForms\WebForms\obj\Debug\WebForms.csproj.ResolveComReference.cache
 C:\Users\Vasco\documents\visual studio 2012\Projects\WebForms\WebForms\bin\Newtonsoft.Json.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\WebForms.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\WebForms.pdb
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.Core.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\EntityFramework.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\System.Web.Providers.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\EntityFramework.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.Core.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\es\EntityFramework.resources.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\es\System.Web.Providers.resources.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\bin\es\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\obj\Debug\WebForms.csprojResolveAssemblyReference.cache
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\obj\Debug\Interop.NETCONLib.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\obj\Debug\WebForms.csproj.ResolveComReference.cache
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\obj\Debug\WebForms.dll
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\WebForms\WebForms\obj\Debug\WebForms.pdb

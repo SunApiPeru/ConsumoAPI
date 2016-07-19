@@ -3,3 +3,8 @@ c:\users\vasco\documents\visual studio 2012\Projects\ConsRest-WebClient\ConsRest
 c:\users\vasco\documents\visual studio 2012\Projects\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.csprojResolveAssemblyReference.cache
 c:\users\vasco\documents\visual studio 2012\Projects\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.exe
 c:\users\vasco\documents\visual studio 2012\Projects\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.pdb
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.exe
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.pdb
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConsRest-WebClient\ConsRest-WebClient\bin\Debug\ConsRest-WebClient.exe
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConsRest-WebClient\ConsRest-WebClient\bin\Debug\ConsRest-WebClient.pdb
+C:\Users\Vasco\Documents\GitHub\ConsumoAPI\C#\Consola\ConsRest-WebClient\ConsRest-WebClient\obj\Debug\ConsRest-WebClient.csprojResolveAssemblyReference.cache

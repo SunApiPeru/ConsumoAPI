@@ -33,7 +33,7 @@ namespace WebForms
 
             // Realizamos la peticion
             HttpWebRequest request;
-            request = WebRequest.Create("https://sunapiperu.com/api/contribuyente?nombre=bar restaurant&apikey=iwqoat87igiazot5by2metoqc9e2npvikag1h1rj") as HttpWebRequest;
+            request = WebRequest.Create("https://sunapiperu.com/api_qa/contribuyente?apikey=sunapi&nombre=bar restaurant") as HttpWebRequest;
             request.Timeout = 10 * 1000;
             request.Method = "GET";
             request.ContentType = "application/json; charset=utf-8";
@@ -60,7 +60,7 @@ namespace WebForms
             #region Peticion REST
             
             WebClient client = new WebClient();
-            string body = client.DownloadString("https://sunapiperu.com/api/contribuyente?nombre=bar restaurant&apikey=iwqoat87igiazot5by2metoqc9e2npvikag1h1rj");          
+            string body = client.DownloadString("https://sunapiperu.com/api_qa/contribuyente?apikey=sunapi&nombre=bar restaurant");          
 
             dynamic ObjectJs = JsonConvert.DeserializeObject(body); // convertimos la cadena json en objetos json
             List<Objeto> ListaObject = new List<Objeto>();
