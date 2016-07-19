@@ -7,7 +7,7 @@
 Básicamente  es una API orientada específicamente a ofrecer servicios de integración que le permitirá a usted obtener a través de sus aplicaciones: consultas de contribuyentes e información financiera en la República del Perú. Proporciona una forma directa de acceder a esos servicios a través de una solicitud HTTPS.
 
 A modo de aclaración:
-Esta API está enfocada hacia desarrolladores de aplicativos de gestión empresarial, móviles u otros que quieran usar información de contribuyentes y al mismo tiempo información financiera correspondiente a las políticas monetarias y de tasas de cambio del sol y otras monedas en Perú. Para usar dicha API, es necesario una API key o token (secuencia de numeros alfanúmericos). Si desea obtener este token debe ingresar a nuestra página web oficial <https://sunapiperu.com> y autenticarse con su usuario de Gmail o GitHub. Acto seguido puede verificar u obtener su API key en la sección de configuración del menu que se encuentra ubicado justo en la esquina superior derecha del sitio, representado con su imagen de perfil (Gmail o GitHub).
+Esta API está enfocada hacia desarrolladores de aplicativos de gestión empresarial, móviles u otros que quieran usar información de contribuyentes y al mismo tiempo información financiera correspondiente a las políticas monetarias y de tasas de cambio del Sol y otras monedas en Perú. Para usar dicha API, es necesario una API key o token (secuencia de numeros alfanúmericos). Si desea obtener este token debe ingresar a nuestra página web oficial <https://sunapiperu.com> y autenticarse con su usuario de Gmail o GitHub. Acto seguido puede verificar u obtener su API key en la sección de configuración del menú que se encuentra ubicado justo en la esquina superior derecha del sitio, representado con su imagen de perfil (Gmail o GitHub).
 
 A continuación se describen todas las funcionalidades de nuestra API y se muestran ejemplos de como debe ser una solicitud HTTPS. Estas consultas se dividen en tres tipos: contribuyentes, tasas de cambio y cálculo.Las respuestas se brindan en formato JSON.
 
@@ -58,9 +58,9 @@ CONSULTAS DE CONTRIBUYENTE
 
 CONSULTAS DE TASA DE CAMBIO Y CÁLCULO
 
-1.Obtener tasa de cambio actual del sol peruano
+1.Obtener tasa de cambio actual del Sol peruano
 	- Descripción:
-	Obtiene la tasa de cambio actual del sol con respecto a la moneda que se pase como parámetro y a la fecha . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se le pasa moneda, devuelve la tasa del USD por defecto. Si no se le pasa fecha toma la actual.
+	Obtiene la tasa de cambio actual del Sol con respecto a la moneda que se pase como parámetro y a la fecha . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se le pasa moneda, devuelve la tasa del USD por defecto. Si no se le pasa fecha toma la actual.
 
 	- Solicitud:
 	<https://sunapiperu.com/api/soles?moneda=eur&apikey=YOUR_API_KEY&fecha=10-03-2016>
@@ -72,9 +72,9 @@ CONSULTAS DE TASA DE CAMBIO Y CÁLCULO
 	.moneda: Es la moneda a la que se le aplica la tasa de cambio("USD, EUR, CAD, GBP, SEK, CHF, JPY"). Si no se especifica devuelve la tasa de cambio al USD por defecto.
 	.fecha: Es la fecha en la que se desea ver la tasa de cambio. Si no existe esa fecha en la base de datos, se retorna para la inmediata inferior.
 
-2.Calcula monto segun tasa actual del sol
+2.Calcula monto segun tasa actual del Sol
 	- Descripción:
-	Calcula el monto de acuerdo a la tasa de cambio actual del sol con respecto a las monedas que se pase como parámetro, la fecha y el valor inicial . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se pasa fecha toma la actual.
+	Calcula el monto de acuerdo a la tasa de cambio actual del Sol con respecto a las monedas que se pase como parámetro, la fecha y el valor inicial . Las monedas permitidas son:"USD, EUR, CAD, GBP, SEK, CHF, JPY". Si no se pasa fecha toma la actual.
 
 	- Solicitud:
 	<https://sunapiperu.com/api/calculadora?valor=500&de=usd&a=eur&apikey=YOUR_API_KEY&fecha=10-03-2016>
