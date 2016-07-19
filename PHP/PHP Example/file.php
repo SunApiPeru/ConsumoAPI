@@ -3,12 +3,12 @@
 	{
 		$nombre = $_GET['Nombre'];
 		// Creo la url con la direccion del servicio y sus parametros
-		$dir = "https://sunapiperu.com/api/contribuyente?nombre=".$nombre."";
+		$dir = "https://sunapiperu.com/api_qa/contribuyente?apikey=sunapi&nombre=".$nombre."";
 		// Obtengo el resultado del servicio en formato json
 		$dir_json = file_get_contents($dir);
 		// Convierto la cadena json en un array php de objetos json
 		$dir_array = json_decode($dir_json,true);
-		//var_dump($dir_array);			
+		var_dump($dir_array);			
 	}	
 ?>
 
