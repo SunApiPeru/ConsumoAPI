@@ -1,5 +1,5 @@
 # coding=utf-8
-# Ejemplo de consumo de API de prueba, SunApiPerú.
+# Ejemplo de consumo de API, versión de pruebas.
 # Elaborado por: Marlon Jodar, miembro del equipo de desarrollo SunApiPerú.
 # Mas información en: https://www.sunapiperu.com/pruebas
 
@@ -12,33 +12,54 @@ restricciones en su módulo ssl lo cuál limita la configuración que urllib3 pu
 que peticiones Https fallen y ciertas caracteristicas de seguridad no esten disponibles emitiendo como resultado
 un InsecurePlatformWarning. Mas información en: http://urllib3.readthedocs.org/en/latest/security.html#certifi-with-urllib3.
 '''
-# Importa la librería requests para realizar las peticiones https. (Mas información: http://docs.python-requests.org/)
+
+# Módulo para realizar las peticiones https. (Mas información: http://docs.python-requests.org/)
 import requests
 
-# Variable global
-API_URL = "https://sunapiperu.com/api/validar_ruc" # URL donde se realiza la petición https. (Ver https://www.sunapiperu.com/features)
+# URL donde se realiza la petición https. (Ver https://www.sunapiperu.com/pruebas)
+API_URL = "https://sunapiperu.com/api_qa/calculadora"
 
-mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como validar la estructura de un RUC. Esperamos que te sea "+\
+# Api key para poder consultar la API de pruebas
+API_KEY = 'sunapi'
+
+mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como utilizar la calculadora monetaria. Esperamos que te sea "+\
 			  		 "de utilidad en tus futuras implementaciones. Cualquier duda o inquietud no dudes en comunicarte con nuestro "+\
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
+					 
+# Imprime los campos del json de respuesta del servidor en el ordén deseado
+def imprime_json_en_orden(objeto_json):
+	print ('- Valor inicial: ' + str(objeto_json['valor_inicial']))
+	print ('- Moneda inicial: ' + objeto_json['moneda_inicial'])
+	print ('- Valor final: ' + str(objeto_json['valor_final']))
+	print ('- Moneda final: ' + objeto_json['moneda_final'])
+	print ('- Tasa de venta: ' + str(objeto_json['tasa_venta']))
+	print ('- Fecha de publicación: ' + objeto_json['fecha_tasa'])	
 
 # Función que captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
 	try:
 		# Captura la entrada del usuario
-		ruc = input('A continuación escriba el RUC del contribuyente que desea consultar y presione la tecla Enter:\n')
+		valor = input('A continuación escriba el valor que desea convertir y presione la tecla Enter:\n')
+		de = input('Escriba la moneda desde la cual desea convertir, Ej: pen y presione la tecla Enter:\n')
+		a = input('Escriba la moneda a la cuál desea convertir, Ej: eur y presione la tecla Enter:\n')
+		fecha = input('Escriba la fecha en la cuál desea aplicar la tasa de cambio y presione la tecla Enter:\n')
+		decimal = input('Escriba a cuantas cifras decimales desea redondear y presione la tecla Enter:\n')
 		# Prepara los parametros para realiza la solicitud
-		parametros = {'ruc':ruc}
+		parametros = {'apikey':API_KEY, 'valor':valor, 'de':de, 'a':a, 'fecha':fecha, 'decimal':decimal}
 		# Realiza la solicitud teniendo en cuenta un timeout de 5 segundos
 		respuesta = requests.get(API_URL, params = parametros, timeout=5.0)
 		# Parsea la respuesta del servidor a un json utilizando el json decoder provisto por requests
 		respuesta_json = respuesta.json()	
-		# Imprime en pantalla la respuesta del servidor
-		print(respuesta_json['message'] + ".")						
-	except:
-		# Ante cualquier excepción imprime un mensaje genérico.
-		print ("Lo sentimos ha ocurrido un error, intente nuevamente.")	
+		# Verifica la respuesta del servidor e imprime en consola de acorde a los resultados
+		if "mensaje" in respuesta_json:
+			print(respuesta_json['mensaje'])
+		else: 
+			print("El cambio de moneda el día " + fecha + " fue:\n")
+			imprime_json_en_orden(respuesta_json)						
+	except Exception as e:
+		# Ante cualquier excepción imprime la excepción
+		print (e)	
 
 # Asegura la ejecución procedural del script como módulo primario de ejecución
 if __name__ == '__main__':
