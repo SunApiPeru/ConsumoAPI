@@ -27,7 +27,7 @@ mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como utilizar 
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
 					 
-# Imprime los campos del json de respuesta del servidor en el ordén deseado
+# Imprime los campos del json de respuesta en el ordén deseado
 def imprime_json_en_orden(objeto_json):
 	print ('- Valor inicial: ' + str(objeto_json['valor_inicial']))
 	print ('- Moneda inicial: ' + objeto_json['moneda_inicial'])
