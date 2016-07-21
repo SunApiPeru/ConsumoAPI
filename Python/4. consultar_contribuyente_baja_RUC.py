@@ -22,7 +22,7 @@ API_URL = "https://sunapiperu.com/api_qa/historial/contribuyente"
 # Api key para poder consultar la API de pruebas
 API_KEY = 'sunapi'
 
-mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como obtener información de un contribuyente usando su RUC. Esperamos que "+\
+mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como obtener información de un contribuyente dado de baja usando su RUC. Esperamos que "+\
 			  		 "te sea de utilidad en tus futuras implementaciones. Cualquier duda o inquietud no dudes en comunicarte con nuestro "+\
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
