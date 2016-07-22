@@ -25,16 +25,7 @@ API_KEY = 'sunapi'
 mensaje_bienvenida = "Hola, bienvenido a este pequeño demo sobre como utilizar la calculadora monetaria. Esperamos que te sea "+\
 			  		 "de utilidad en tus futuras implementaciones. Cualquier duda o inquietud no dudes en comunicarte con nuestro "+\
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
-		  			 "equipo de desarrollo SunApiPerú.\n"
-					 
-# Imprime los campos del json de respuesta en el ordén deseado
-def imprime_json_en_orden(objeto_json):
-	print ('- Valor inicial: ' + str(objeto_json['valor_inicial']))
-	print ('- Moneda inicial: ' + objeto_json['moneda_inicial'])
-	print ('- Valor final: ' + str(objeto_json['valor_final']))
-	print ('- Moneda final: ' + objeto_json['moneda_final'])
-	print ('- Tasa de venta: ' + str(objeto_json['tasa_venta']))
-	print ('- Fecha de publicación: ' + objeto_json['fecha_tasa'])	
+		  			 "equipo de desarrollo SunApiPerú.\n"					 
 
 # Función que captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
@@ -55,8 +46,9 @@ def realiza_solicitud():
 		if "mensaje" in respuesta_json:
 			print(respuesta_json['mensaje'])
 		else: 
-			print("El cambio de moneda el día " + fecha + " fue:\n")
-			imprime_json_en_orden(respuesta_json)						
+			print("El servidor respondió:\n")						
+			for key in respuesta_json:
+				print('- ' + key + ': ' + str(respuesta_json[key]))
 	except Exception as e:
 		# Ante cualquier excepción imprime la excepción
 		print (e)	

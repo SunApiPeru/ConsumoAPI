@@ -28,19 +28,6 @@ mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como realiza
 			  		 " contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
 
-# Imprime los campos del json de respuesta del servidor en el ordén deseado
-def imprime_json_en_orden(objeto_json):
-	print ('- RUC: ' + objeto_json['ruc'])
-	print ('- Estado: ' + objeto_json['estado'])
-	print ('- Nombre: ' + objeto_json['nombre'])
-	print ('- Departamento: ' + objeto_json['departamento'])
-	print ('- Provincia: ' + objeto_json['provincia'])
-	print ('- Distrito: ' + objeto_json['distrito'])	
-	print ('- Calle: ' + objeto_json['calle'])
-	print ('- Número: ' + objeto_json['numero'])
-	print ('- Ubigeo: ' + objeto_json['ubigeo'])
-	print ('- URL_Mapa: ' + objeto_json['mapa'] + '\n')
-
 # Captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
 	try:
@@ -59,7 +46,9 @@ def realiza_solicitud():
 			print ('- Los contribuyentes encontrados son:\n ')
 			for contribuyente in respuesta_json:
 				print('Contribuyente: ')
-				imprime_json_en_orden(contribuyente)			
+				for key in contribuyente:
+					print('- ' + key + ': ' + str(contribuyente[key]))
+				print('\n')			
 	except Exception as e:
 		# Ante cualquier excepción imprime la excepción
 		print (e)	
