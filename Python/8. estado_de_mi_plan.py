@@ -24,14 +24,6 @@ mensaje_bienvenida = "Hola, bienvenido a este pequeño script sobre como consult
 			  		 "equipo utilizando el formulario de contacto en nuestra página web https://www.sunapiperu.com. Saludos pythonicos, "+\
 		  			 "equipo de desarrollo SunApiPerú.\n"
 
-# Imprime los campos del json de respuesta del servidor en el ordén deseado
-def imprime_json_en_orden(objeto_json):
-	print ("El estado de su plan es:")
-	print ('- Tipo de plan: ' + objeto_json['plan'])
-	print ('- Peticiones disponibles: ' + str(objeto_json['disponibles']))
-	print ('- Peticiones realizadas: ' + str(objeto_json['peticiones']))
-	print ('- Fecha de renovación: ' + objeto_json['renueva'])
-
 # Captura la entrada del usuario, realiza la solicitud e imprime el resultado en pantalla
 def realiza_solicitud():	
 	try:
@@ -47,7 +39,9 @@ def realiza_solicitud():
 		if "mensaje" in respuesta_json:
 			print (respuesta_json['mensaje'])
 		else: 
-			imprime_json_en_orden(respuesta_json)							
+			print("El servidor respondió:\n")						
+			for key in respuesta_json:
+				print('- ' + key + ': ' + str(respuesta_json[key]))							
 	except Exception as e:
 		# De haber una excepción la imprime		
 		print (e)
